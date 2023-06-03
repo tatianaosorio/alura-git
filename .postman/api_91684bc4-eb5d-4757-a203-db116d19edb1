@@ -9,6 +9,7 @@ id = 91684bc4-eb5d-4757-a203-db116d19edb1
 
 [config.relations.collections]
 rootDirectory = postman/collections
+files[] = {"id":"20594667-28375801-082b-43c8-bc8d-0e31f415e379","path":"IceCream Collection.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 

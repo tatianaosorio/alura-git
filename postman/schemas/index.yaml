@@ -8,7 +8,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/vinParam'          
     get:
-      summary: Returns the current odometer reading in both km and miles
+      summary: Returns the current odometer reading in both kms and miles
       operationId: getOdometerStatus
       responses:
         '200':
