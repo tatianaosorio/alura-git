@@ -462,7 +462,7 @@
 									"id": "f7fe1fe7-3e8b-478f-95e8-c7b7eac2a362"
 								},
 								{
-									"name": "llantas",
+									"name": "llantasPrueba2",
 									"item": [
 										{
 											"name": "Get llantas",
@@ -509,7 +509,31 @@
 											"response": []
 										}
 									],
-									"id": "f41909a0-55d4-4be6-b46a-4d36b1b90c71"
+									"id": "f41909a0-55d4-4be6-b46a-4d36b1b90c71",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "421ca3fb-2c58-4a81-9811-c73932506b96",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "25322d38-d13d-4d1b-b25c-05e183f54277",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
 								}
 							],
 							"id": "2bf303d6-ae9c-487c-86fe-3dac850512d6"
