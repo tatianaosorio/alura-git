@@ -466,6 +466,20 @@
 									"item": [
 										{
 											"name": "Get llantas",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "11f5559a-a94b-4d7a-a9ad-19eb7de93f66",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "2ff416f6-aabe-4406-94d2-ed1ceb46ff60",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -551,7 +565,7 @@
 	],
 	"variable": [
 		{
-			"id": "8cbd2d9f-0130-48ae-9a71-b9839ec83efd",
+			"id": "a01b8e2b-81d5-45d2-a1b4-e8ae305cac6a",
 			"key": "baseUrl",
 			"value": "https://customer-education.postmanlabs.com/apis"
 		}
