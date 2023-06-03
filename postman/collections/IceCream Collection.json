@@ -21,6 +21,20 @@
 									"item": [
 										{
 											"name": "Returns the current odometer reading in both kms and miles",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "a1d1f724-6ef8-430b-a0a3-8e7068ce35f7",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "8b69a168-26ea-46b3-9ec9-f30781d6ad4f",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -155,6 +169,20 @@
 									"item": [
 										{
 											"name": "Returns a complete status and health update for the engine",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "19450c26-2511-4c8c-adc6-e5ba7a85be74",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "afffc6bd-f0fe-4b25-8903-5be092e56b53",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -290,6 +318,20 @@
 									"item": [
 										{
 											"name": "Returns a status and health report for all connected battery elements (includes EV batteries as well)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "425053c9-7e73-494d-b86d-3783db2bdd0b",
+														"exec": [
+															"pm.test(\"Status code is 200\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "ace7bd76-f256-4f8f-a4e5-db9e6e0d00ef",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -418,6 +460,42 @@
 										}
 									],
 									"id": "f7fe1fe7-3e8b-478f-95e8-c7b7eac2a362"
+								},
+								{
+									"name": "llantas",
+									"item": [
+										{
+											"name": "Get llantas",
+											"id": "2ff416f6-aabe-4406-94d2-ed1ceb46ff60",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/vehicles/:vin/status/llantas",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"vehicles",
+														":vin",
+														"status",
+														"llantas"
+													],
+													"variable": [
+														{
+															"key": "vin",
+															"value": null
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"id": "f41909a0-55d4-4be6-b46a-4d36b1b90c71"
 								}
 							],
 							"id": "2bf303d6-ae9c-487c-86fe-3dac850512d6"
@@ -449,11 +527,33 @@
 			}
 		]
 	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bf0613a9-6eac-4f1e-8963-891e1945a808",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "82f46be6-35d0-46cd-a76d-560184282455",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "3a86e74c-4b30-4fcb-8009-b0c7b98ef432",
+			"id": "8cbd2d9f-0130-48ae-9a71-b9839ec83efd",
 			"key": "baseUrl",
-			"value": "/"
+			"value": "https://customer-education.postmanlabs.com/apis"
 		}
 	]
 }
